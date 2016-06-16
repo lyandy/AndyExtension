@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3608E79B63551CE6EA5BDF24 /* Pods_AndyExtension_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911306DB82EB5B8C4228E1D /* Pods_AndyExtension_Test.framework */; };
+		B68CA0281D124AEC0030D1AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0271D124AEC0030D1AA /* main.m */; };
+		B68CA0331D124AEC0030D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0321D124AEC0030D1AA /* Assets.xcassets */; };
+		B68CA0411D124AEC0030D1AA /* AndyExtension_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0401D124AEC0030D1AA /* AndyExtension_TestTests.m */; };
+		B68CA04C1D124AEC0030D1AA /* AndyExtension_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA04B1D124AEC0030D1AA /* AndyExtension_TestUITests.m */; };
+		B68CA09C1D124D5E0030D1AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0971D124D5E0030D1AA /* AppDelegate.m */; };
+		B68CA0A91D1250570030D1AA /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0A81D1250570030D1AA /* TestData.plist */; };
+		B68CA0B01D12513E0030D1AA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0AD1D12513E0030D1AA /* MainViewController.m */; };
+		B68CA0B11D12513E0030D1AA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0AE1D12513E0030D1AA /* MainViewController.xib */; };
+		B68CA0BA1D1251AF0030D1AA /* PicUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B31D1251AF0030D1AA /* PicUrls.m */; };
+		B68CA0BB1D1251AF0030D1AA /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B51D1251AF0030D1AA /* Status.m */; };
+		B68CA0BC1D1251AF0030D1AA /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B71D1251AF0030D1AA /* TestData.m */; };
+		B68CA0BD1D1251AF0030D1AA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B91D1251AF0030D1AA /* User.m */; };
+		B68CA1181D129A1C0030D1AA /* NSObject+AndyDurex.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */; };
+		B68CA1191D129A1C0030D1AA /* NSObject+AndyKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B68CA03D1D124AEC0030D1AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68CA01B1D124AEC0030D1AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B68CA0221D124AEC0030D1AA;
+			remoteInfo = AndyExtension_Test;
+		};
+		B68CA0481D124AEC0030D1AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68CA01B1D124AEC0030D1AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B68CA0221D124AEC0030D1AA;
+			remoteInfo = AndyExtension_Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09517B3861F88D42053BA32E /* Pods-AndyExtension_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyExtension_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test.release.xcconfig"; sourceTree = "<group>"; };
+		450A738E1D18FF3D74EE3ABB /* Pods-AndyExtension_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyExtension_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		5911306DB82EB5B8C4228E1D /* Pods_AndyExtension_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyExtension_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68CA0231D124AEC0030D1AA /* AndyExtension_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndyExtension_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68CA0271D124AEC0030D1AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B68CA0321D124AEC0030D1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B68CA0371D124AEC0030D1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B68CA03C1D124AEC0030D1AA /* AndyExtension_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndyExtension_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68CA0401D124AEC0030D1AA /* AndyExtension_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndyExtension_TestTests.m; sourceTree = "<group>"; };
+		B68CA0421D124AEC0030D1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B68CA0471D124AEC0030D1AA /* AndyExtension_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndyExtension_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68CA04B1D124AEC0030D1AA /* AndyExtension_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndyExtension_TestUITests.m; sourceTree = "<group>"; };
+		B68CA04D1D124AEC0030D1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B68CA0961D124D5E0030D1AA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B68CA0971D124D5E0030D1AA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B68CA09E1D124E2A0030D1AA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B68CA0A01D124E490030D1AA /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		B68CA0A81D1250570030D1AA /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		B68CA0AC1D12513E0030D1AA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B68CA0AD1D12513E0030D1AA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B68CA0AE1D12513E0030D1AA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B68CA0B21D1251AF0030D1AA /* PicUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicUrls.h; sourceTree = "<group>"; };
+		B68CA0B31D1251AF0030D1AA /* PicUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicUrls.m; sourceTree = "<group>"; };
+		B68CA0B41D1251AF0030D1AA /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		B68CA0B51D1251AF0030D1AA /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		B68CA0B61D1251AF0030D1AA /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestData.h; sourceTree = "<group>"; };
+		B68CA0B71D1251AF0030D1AA /* TestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestData.m; sourceTree = "<group>"; };
+		B68CA0B81D1251AF0030D1AA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B68CA0B91D1251AF0030D1AA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B68CA1131D129A1C0030D1AA /* AndyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyExtension.h; sourceTree = "<group>"; };
+		B68CA1141D129A1C0030D1AA /* NSObject+AndyDurex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyDurex.h"; sourceTree = "<group>"; };
+		B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyDurex.m"; sourceTree = "<group>"; };
+		B68CA1161D129A1C0030D1AA /* NSObject+AndyKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyKeyValue.h"; sourceTree = "<group>"; };
+		B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyKeyValue.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B68CA0201D124AEC0030D1AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3608E79B63551CE6EA5BDF24 /* Pods_AndyExtension_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA0391D124AEC0030D1AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA0441D124AEC0030D1AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410BD6EF0AE06DD33C6B4D9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				450A738E1D18FF3D74EE3ABB /* Pods-AndyExtension_Test.debug.xcconfig */,
+				09517B3861F88D42053BA32E /* Pods-AndyExtension_Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E4E9C172293F0A2FD5348D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5911306DB82EB5B8C4228E1D /* Pods_AndyExtension_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B68CA01A1D124AEC0030D1AA = {
+			isa = PBXGroup;
+			children = (
+				B68CA1121D129A1C0030D1AA /* AndyExtension */,
+				B68CA0251D124AEC0030D1AA /* AndyExtension_Test */,
+				B68CA03F1D124AEC0030D1AA /* AndyExtension_TestTests */,
+				B68CA04A1D124AEC0030D1AA /* AndyExtension_TestUITests */,
+				B68CA0241D124AEC0030D1AA /* Products */,
+				410BD6EF0AE06DD33C6B4D9E /* Pods */,
+				6E4E9C172293F0A2FD5348D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B68CA0241D124AEC0030D1AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0231D124AEC0030D1AA /* AndyExtension_Test.app */,
+				B68CA03C1D124AEC0030D1AA /* AndyExtension_TestTests.xctest */,
+				B68CA0471D124AEC0030D1AA /* AndyExtension_TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B68CA0251D124AEC0030D1AA /* AndyExtension_Test */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0901D124D5E0030D1AA /* Classes */,
+				B68CA0261D124AEC0030D1AA /* Supporting Files */,
+			);
+			path = AndyExtension_Test;
+			sourceTree = "<group>";
+		};
+		B68CA0261D124AEC0030D1AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0A81D1250570030D1AA /* TestData.plist */,
+				B68CA0321D124AEC0030D1AA /* Assets.xcassets */,
+				B68CA0371D124AEC0030D1AA /* Info.plist */,
+				B68CA0271D124AEC0030D1AA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B68CA03F1D124AEC0030D1AA /* AndyExtension_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0401D124AEC0030D1AA /* AndyExtension_TestTests.m */,
+				B68CA0421D124AEC0030D1AA /* Info.plist */,
+			);
+			path = AndyExtension_TestTests;
+			sourceTree = "<group>";
+		};
+		B68CA04A1D124AEC0030D1AA /* AndyExtension_TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA04B1D124AEC0030D1AA /* AndyExtension_TestUITests.m */,
+				B68CA04D1D124AEC0030D1AA /* Info.plist */,
+			);
+			path = AndyExtension_TestUITests;
+			sourceTree = "<group>";
+		};
+		B68CA0901D124D5E0030D1AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0911D124D5E0030D1AA /* Main */,
+				B68CA0951D124D5E0030D1AA /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B68CA0911D124D5E0030D1AA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0AA1D12513E0030D1AA /* Model */,
+				B68CA0AB1D12513E0030D1AA /* View */,
+				B68CA0AF1D12513E0030D1AA /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B68CA0951D124D5E0030D1AA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA09F1D124E3E0030D1AA /* Global */,
+				B68CA0961D124D5E0030D1AA /* AppDelegate.h */,
+				B68CA0971D124D5E0030D1AA /* AppDelegate.m */,
+				B68CA0981D124D5E0030D1AA /* Common */,
+				B68CA0991D124D5E0030D1AA /* Tool */,
+				B68CA09E1D124E2A0030D1AA /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B68CA0981D124D5E0030D1AA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B68CA0991D124D5E0030D1AA /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B68CA09F1D124E3E0030D1AA /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0A01D124E490030D1AA /* Global.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		B68CA0AA1D12513E0030D1AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0B21D1251AF0030D1AA /* PicUrls.h */,
+				B68CA0B31D1251AF0030D1AA /* PicUrls.m */,
+				B68CA0B41D1251AF0030D1AA /* Status.h */,
+				B68CA0B51D1251AF0030D1AA /* Status.m */,
+				B68CA0B61D1251AF0030D1AA /* TestData.h */,
+				B68CA0B71D1251AF0030D1AA /* TestData.m */,
+				B68CA0B81D1251AF0030D1AA /* User.h */,
+				B68CA0B91D1251AF0030D1AA /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B68CA0AB1D12513E0030D1AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA0AC1D12513E0030D1AA /* MainViewController.h */,
+				B68CA0AD1D12513E0030D1AA /* MainViewController.m */,
+				B68CA0AE1D12513E0030D1AA /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B68CA0AF1D12513E0030D1AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B68CA1121D129A1C0030D1AA /* AndyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B68CA1131D129A1C0030D1AA /* AndyExtension.h */,
+				B68CA1141D129A1C0030D1AA /* NSObject+AndyDurex.h */,
+				B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */,
+				B68CA1161D129A1C0030D1AA /* NSObject+AndyKeyValue.h */,
+				B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */,
+			);
+			path = AndyExtension;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B68CA0221D124AEC0030D1AA /* AndyExtension_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B68CA0501D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_Test" */;
+			buildPhases = (
+				B2AE04386472DF82FF0E09AA /* [CP] Check Pods Manifest.lock */,
+				B68CA01F1D124AEC0030D1AA /* Sources */,
+				B68CA0201D124AEC0030D1AA /* Frameworks */,
+				B68CA0211D124AEC0030D1AA /* Resources */,
+				2D697C31AC8C3EF5FD9B288E /* [CP] Embed Pods Frameworks */,
+				D5C1558410A6B7E3E3F63BBD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AndyExtension_Test;
+			productName = AndyExtension_Test;
+			productReference = B68CA0231D124AEC0030D1AA /* AndyExtension_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B68CA03B1D124AEC0030D1AA /* AndyExtension_TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B68CA0531D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_TestTests" */;
+			buildPhases = (
+				B68CA0381D124AEC0030D1AA /* Sources */,
+				B68CA0391D124AEC0030D1AA /* Frameworks */,
+				B68CA03A1D124AEC0030D1AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B68CA03E1D124AEC0030D1AA /* PBXTargetDependency */,
+			);
+			name = AndyExtension_TestTests;
+			productName = AndyExtension_TestTests;
+			productReference = B68CA03C1D124AEC0030D1AA /* AndyExtension_TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B68CA0461D124AEC0030D1AA /* AndyExtension_TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B68CA0561D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_TestUITests" */;
+			buildPhases = (
+				B68CA0431D124AEC0030D1AA /* Sources */,
+				B68CA0441D124AEC0030D1AA /* Frameworks */,
+				B68CA0451D124AEC0030D1AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B68CA0491D124AEC0030D1AA /* PBXTargetDependency */,
+			);
+			name = AndyExtension_TestUITests;
+			productName = AndyExtension_TestUITests;
+			productReference = B68CA0471D124AEC0030D1AA /* AndyExtension_TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B68CA01B1D124AEC0030D1AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = andyli;
+				TargetAttributes = {
+					B68CA0221D124AEC0030D1AA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					B68CA03B1D124AEC0030D1AA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B68CA0221D124AEC0030D1AA;
+					};
+					B68CA0461D124AEC0030D1AA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B68CA0221D124AEC0030D1AA;
+					};
+				};
+			};
+			buildConfigurationList = B68CA01E1D124AEC0030D1AA /* Build configuration list for PBXProject "AndyExtension_Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B68CA01A1D124AEC0030D1AA;
+			productRefGroup = B68CA0241D124AEC0030D1AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B68CA0221D124AEC0030D1AA /* AndyExtension_Test */,
+				B68CA03B1D124AEC0030D1AA /* AndyExtension_TestTests */,
+				B68CA0461D124AEC0030D1AA /* AndyExtension_TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B68CA0211D124AEC0030D1AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68CA0331D124AEC0030D1AA /* Assets.xcassets in Resources */,
+				B68CA0B11D12513E0030D1AA /* MainViewController.xib in Resources */,
+				B68CA0A91D1250570030D1AA /* TestData.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA03A1D124AEC0030D1AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA0451D124AEC0030D1AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D697C31AC8C3EF5FD9B288E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AE04386472DF82FF0E09AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C1558410A6B7E3E3F63BBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B68CA01F1D124AEC0030D1AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68CA1191D129A1C0030D1AA /* NSObject+AndyKeyValue.m in Sources */,
+				B68CA0BA1D1251AF0030D1AA /* PicUrls.m in Sources */,
+				B68CA0BC1D1251AF0030D1AA /* TestData.m in Sources */,
+				B68CA0BD1D1251AF0030D1AA /* User.m in Sources */,
+				B68CA0281D124AEC0030D1AA /* main.m in Sources */,
+				B68CA09C1D124D5E0030D1AA /* AppDelegate.m in Sources */,
+				B68CA0B01D12513E0030D1AA /* MainViewController.m in Sources */,
+				B68CA1181D129A1C0030D1AA /* NSObject+AndyDurex.m in Sources */,
+				B68CA0BB1D1251AF0030D1AA /* Status.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA0381D124AEC0030D1AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68CA0411D124AEC0030D1AA /* AndyExtension_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68CA0431D124AEC0030D1AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68CA04C1D124AEC0030D1AA /* AndyExtension_TestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B68CA03E1D124AEC0030D1AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B68CA0221D124AEC0030D1AA /* AndyExtension_Test */;
+			targetProxy = B68CA03D1D124AEC0030D1AA /* PBXContainerItemProxy */;
+		};
+		B68CA0491D124AEC0030D1AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B68CA0221D124AEC0030D1AA /* AndyExtension_Test */;
+			targetProxy = B68CA0481D124AEC0030D1AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B68CA04E1D124AEC0030D1AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B68CA04F1D124AEC0030D1AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B68CA0511D124AEC0030D1AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450A738E1D18FF3D74EE3ABB /* Pods-AndyExtension_Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/AndyExtension_Test/Classes/Other/PrefixHeader.pch";
+				INFOPLIST_FILE = AndyExtension_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Debug;
+		};
+		B68CA0521D124AEC0030D1AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09517B3861F88D42053BA32E /* Pods-AndyExtension_Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/AndyExtension_Test/Classes/Other/PrefixHeader.pch";
+				INFOPLIST_FILE = AndyExtension_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Release;
+		};
+		B68CA0541D124AEC0030D1AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AndyExtension_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndyExtension_Test.app/AndyExtension_Test";
+			};
+			name = Debug;
+		};
+		B68CA0551D124AEC0030D1AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AndyExtension_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndyExtension_Test.app/AndyExtension_Test";
+			};
+			name = Release;
+		};
+		B68CA0571D124AEC0030D1AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AndyExtension_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AndyExtension_Test;
+			};
+			name = Debug;
+		};
+		B68CA0581D124AEC0030D1AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AndyExtension_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andy4app.AndyExtension-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AndyExtension_Test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B68CA01E1D124AEC0030D1AA /* Build configuration list for PBXProject "AndyExtension_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68CA04E1D124AEC0030D1AA /* Debug */,
+				B68CA04F1D124AEC0030D1AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B68CA0501D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68CA0511D124AEC0030D1AA /* Debug */,
+				B68CA0521D124AEC0030D1AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B68CA0531D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68CA0541D124AEC0030D1AA /* Debug */,
+				B68CA0551D124AEC0030D1AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B68CA0561D124AEC0030D1AA /* Build configuration list for PBXNativeTarget "AndyExtension_TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68CA0571D124AEC0030D1AA /* Debug */,
+				B68CA0581D124AEC0030D1AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B68CA01B1D124AEC0030D1AA /* Project object */;
+}
