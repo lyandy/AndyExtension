@@ -257,11 +257,14 @@
         if ([value class] && ![AndyFoundation isClassFromFoundation:[value class]]) {
             value = [value andy_keyValues];
         }
-        
         //如果是数组的话遍历来处理
-        if ([value isKindOfClass:[NSArray class]])
+        else if ([value isKindOfClass:[NSArray class]])
         {
             value = [NSObject andy_keyValuesWithObjectArray:value];
+        }
+        else if ([value isKindOfClass:[NSURL class]])
+        {
+            value = [value absoluteString];
         }
         
         dictM[key] = value;
