@@ -7,9 +7,37 @@
 //
 
 #import "NSObject+AndyKeyValue.h"
+#import "AndyFoundation.h"
 #import <objc/message.h>
 
 @implementation NSObject (AndyKeyValue)
+
++ (instancetype)andy_objectWithFileName:(NSString *)fileName
+{
+    return [self andy_objectWithFilePath:[[NSBundle mainBundle] pathForResource:fileName ofType:nil]];
+}
+
++ (instancetype)andy_objectWithFilePath:(NSString *)filePath
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    if (dict == nil)
+    {
+        NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        
+        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        dict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    }
+    
+    return [self andy_objectWithKeyValues:dict];
+}
+
++ (instancetype)andy_objectWithString:(NSString *)jsonString
+{
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    
+    return [self andy_objectWithKeyValues:dict];
+}
 
 + (instancetype)andy_objectWithKeyValues:(NSDictionary *)keyValues
 {
@@ -77,7 +105,18 @@
             NSDictionary *replacedArrayModelDict = [self andy_objectClassInArray];
             if (replacedArrayModelDict != nil)
             {
-                Class replacedModelClass = replacedArrayModelDict[key];
+                Class replacedModelClass = nil;
+                
+                id replacedValue = replacedArrayModelDict[key];
+                
+                if ([replacedValue isKindOfClass:[NSString class]])
+                {
+                    replacedModelClass = NSClassFromString(replacedValue);
+                }
+                else
+                {
+                    replacedModelClass = replacedValue;
+                }
 
                 //如果找到 数据 里的数据模型类型
                 if (replacedModelClass != nil)
@@ -101,6 +140,36 @@
 
 }
 
+
+
++ (NSArray *)andy_objectArrayWithFileName:(NSString *)fileName
+{
+    return [self andy_objectArrayWithFilePath:[[NSBundle mainBundle] pathForResource:fileName ofType:nil]];
+}
+
++ (NSArray *)andy_objectArrayWithFilePath:(NSString *)filePath
+{
+    NSArray *array = [NSArray arrayWithContentsOfFile:filePath];
+    if (array == nil)
+    {
+        NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        
+        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        array = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    }
+    
+    return [self andy_objectArrayWithKeyValuesArray:array];
+}
+
++ (NSArray *)andy_objectArrayWithString:(NSString *)jsonString
+{
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *arr = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    
+    return [self andy_objectArrayWithKeyValuesArray:arr];
+
+}
+
 + (NSArray *)andy_objectArrayWithKeyValuesArray:(NSArray *)keyValuesArray
 {
     NSMutableArray *arrM = [NSMutableArray array];
@@ -119,4 +188,112 @@
     }
 }
 
+
+
+- (NSData *)andy_JSONData
+{
+    if ([self isKindOfClass:[NSString class]])
+    {
+        return [(NSString *)self dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    else if ([self isKindOfClass:[NSData class]])
+    {
+        return (NSData *)self;
+    }
+    
+    return [NSJSONSerialization dataWithJSONObject:[self andy_JSONObject] options:kNilOptions error:nil];
+}
+
+- (instancetype)andy_JSONObject
+{
+    if ([self isKindOfClass:[NSString class]])
+    {
+        return [NSJSONSerialization JSONObjectWithData:[(NSString *)self dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    }
+    else if ([self isKindOfClass:[NSData class]])
+    {
+        return [NSJSONSerialization JSONObjectWithData:(NSData *)self options:kNilOptions error:nil];
+    }
+    
+    return [self andy_keyValues];
+}
+
+- (NSString *)andy_JSONString
+{
+    if ([self isKindOfClass:[NSString class]])
+    {
+        return (NSString *)self;
+    }
+    else if ([self isKindOfClass:[NSData class]])
+    {
+        return [[NSString alloc] initWithData:(NSData *)self encoding:NSUTF8StringEncoding];
+    }
+    
+    return [[NSString alloc] initWithData:[self andy_JSONData] encoding:NSUTF8StringEncoding];
+}
+
+- (NSDictionary *)andy_keyValues
+{
+    NSMutableDictionary *dictM = [NSMutableDictionary dictionary];
+    
+    Class classSelf = [self class];
+    
+    unsigned int count = 0;
+    Ivar *ivarList = class_copyIvarList(classSelf, &count);
+    for (int i = 0 ; i < count; i++) {
+        // 获取成员属性
+        Ivar ivar = ivarList[i];
+        
+        // 获取成员名
+        NSString *propertyName = [NSString stringWithUTF8String:ivar_getName(ivar)];
+        
+        // 获取key
+        NSString *key = [propertyName substringFromIndex:1];
+        
+        // 获取字典的value
+        id value = [self valueForKey:key];
+        
+        //这里要判断是不是 自己 创建的类 字典。（判断当前oc类是不是Foundation自有的。因为NSDcitonary的value只能添加oc类的对象，如果不是就需要自己处理一下转换成NSDictionary）
+        if ([value class] && ![AndyFoundation isClassFromFoundation:[value class]]) {
+            value = [value andy_keyValues];
+        }
+        
+        //如果是数组的话遍历来处理
+        if ([value isKindOfClass:[NSArray class]])
+        {
+            value = [NSObject andy_keyValuesWithObjectArray:value];
+        }
+        
+        dictM[key] = value;
+    }
+    
+    return [dictM copy];
+}
+
++ (NSArray *)andy_keyValuesWithObjectArray:(NSArray *)objectArray
+{
+    // 1.创建数组
+    NSMutableArray *keyValuesArray = [NSMutableArray array];
+    for (id object in objectArray) {
+        [keyValuesArray addObject:[object andy_keyValues]];
+    }
+    return [keyValuesArray copy];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

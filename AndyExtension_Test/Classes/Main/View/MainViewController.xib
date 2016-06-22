@@ -9,6 +9,13 @@
             <connections>
                 <outlet property="testArrayToModeArrayBtn" destination="RW8-bC-8vw" id="fMK-f1-3op"/>
                 <outlet property="testDictToModelBtn" destination="pTW-zL-OXy" id="376-vk-buI"/>
+                <outlet property="testFileNameToModelArrayBtn" destination="bzN-Qx-954" id="5uW-FI-KRs"/>
+                <outlet property="testFileNameToModelBtn" destination="sl5-vr-uR0" id="zp9-nI-tY3"/>
+                <outlet property="testFilePathToModelArrayBtn" destination="zdG-2I-OJ7" id="rj1-o6-Sdl"/>
+                <outlet property="testFilePathToModelBtn" destination="iU7-TX-77Z" id="2aa-p0-r8R"/>
+                <outlet property="testModelToString" destination="gu0-Wl-ppf" id="w3k-bu-0c7"/>
+                <outlet property="testStringToModelArrayBtn" destination="9vg-Bh-dd4" id="ITP-Rw-Lzg"/>
+                <outlet property="testStringToModelBtn" destination="Bn3-Mz-h1Q" id="3Ad-2p-P91"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,19 +24,54 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RW8-bC-8vw">
-                    <rect key="frame" x="97" y="222" width="148" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="测试数组转模型数组"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pTW-zL-OXy">
-                    <rect key="frame" x="97" y="72" width="134" height="49"/>
+                    <rect key="frame" x="85" y="133" width="150" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="测试字典转模型"/>
+                    <state key="normal" title="测试传入字典转模型"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bn3-Mz-h1Q">
+                    <rect key="frame" x="77" y="14" width="166" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入字符串转模型"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sl5-vr-uR0">
+                    <rect key="frame" x="77" y="52" width="166" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入文件名称转模型"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iU7-TX-77Z">
+                    <rect key="frame" x="77" y="90" width="166" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入文件路径转模型"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9vg-Bh-dd4">
+                    <rect key="frame" x="66" y="328" width="194" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入字符串转模型数组"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bzN-Qx-954">
+                    <rect key="frame" x="64" y="373" width="199" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入文件名称转模型数组"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zdG-2I-OJ7">
+                    <rect key="frame" x="77" y="411" width="166" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入文件路径转模型"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gu0-Wl-ppf">
+                    <rect key="frame" x="96" y="237" width="129" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试模型转字符串"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RW8-bC-8vw">
+                    <rect key="frame" x="77" y="460" width="173" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="测试传入数组转模型数组"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="483" y="221"/>
+            <point key="canvasLocation" x="253" y="191"/>
         </view>
     </objects>
 </document>

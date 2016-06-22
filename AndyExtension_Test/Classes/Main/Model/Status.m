@@ -14,6 +14,7 @@
 + (NSDictionary *)andy_objectClassInArray
 {
     return @{@"pic_urls" : [PicUrls class]};
+    //return @{@"pic_urls" : @"PicUrls"};
 }
 
 @end

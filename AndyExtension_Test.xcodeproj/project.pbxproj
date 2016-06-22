@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3608E79B63551CE6EA5BDF24 /* Pods_AndyExtension_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911306DB82EB5B8C4228E1D /* Pods_AndyExtension_Test.framework */; };
+		B662E5FC1D1A4E0A00986954 /* TestDataForJsonArray.txt in Resources */ = {isa = PBXBuildFile; fileRef = B662E5FA1D1A4E0A00986954 /* TestDataForJsonArray.txt */; };
+		B662E5FD1D1A4E0A00986954 /* TestDataForJsonModel.txt in Resources */ = {isa = PBXBuildFile; fileRef = B662E5FB1D1A4E0A00986954 /* TestDataForJsonModel.txt */; };
+		B662E5FF1D1A6E0A00986954 /* TestDataArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = B662E5FE1D1A6E0A00986954 /* TestDataArray.plist */; };
+		B662E6021D1A813400986954 /* AndyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B662E6011D1A813400986954 /* AndyFoundation.m */; };
 		B68CA0281D124AEC0030D1AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0271D124AEC0030D1AA /* main.m */; };
 		B68CA0331D124AEC0030D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0321D124AEC0030D1AA /* Assets.xcassets */; };
 		B68CA0411D124AEC0030D1AA /* AndyExtension_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0401D124AEC0030D1AA /* AndyExtension_TestTests.m */; };
 		B68CA04C1D124AEC0030D1AA /* AndyExtension_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA04B1D124AEC0030D1AA /* AndyExtension_TestUITests.m */; };
 		B68CA09C1D124D5E0030D1AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0971D124D5E0030D1AA /* AppDelegate.m */; };
-		B68CA0A91D1250570030D1AA /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0A81D1250570030D1AA /* TestData.plist */; };
+		B68CA0A91D1250570030D1AA /* TestDataJson.plist in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0A81D1250570030D1AA /* TestDataJson.plist */; };
 		B68CA0B01D12513E0030D1AA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0AD1D12513E0030D1AA /* MainViewController.m */; };
 		B68CA0B11D12513E0030D1AA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68CA0AE1D12513E0030D1AA /* MainViewController.xib */; };
 		B68CA0BA1D1251AF0030D1AA /* PicUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B31D1251AF0030D1AA /* PicUrls.m */; };
@@ -45,6 +49,11 @@
 		09517B3861F88D42053BA32E /* Pods-AndyExtension_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyExtension_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test.release.xcconfig"; sourceTree = "<group>"; };
 		450A738E1D18FF3D74EE3ABB /* Pods-AndyExtension_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyExtension_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyExtension_Test/Pods-AndyExtension_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		5911306DB82EB5B8C4228E1D /* Pods_AndyExtension_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyExtension_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B662E5FA1D1A4E0A00986954 /* TestDataForJsonArray.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDataForJsonArray.txt; sourceTree = "<group>"; };
+		B662E5FB1D1A4E0A00986954 /* TestDataForJsonModel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestDataForJsonModel.txt; sourceTree = "<group>"; };
+		B662E5FE1D1A6E0A00986954 /* TestDataArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDataArray.plist; sourceTree = "<group>"; };
+		B662E6001D1A813400986954 /* AndyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyFoundation.h; sourceTree = "<group>"; };
+		B662E6011D1A813400986954 /* AndyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndyFoundation.m; sourceTree = "<group>"; };
 		B68CA0231D124AEC0030D1AA /* AndyExtension_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndyExtension_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68CA0271D124AEC0030D1AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B68CA0321D124AEC0030D1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +68,7 @@
 		B68CA0971D124D5E0030D1AA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B68CA09E1D124E2A0030D1AA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B68CA0A01D124E490030D1AA /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		B68CA0A81D1250570030D1AA /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		B68CA0A81D1250570030D1AA /* TestDataJson.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestDataJson.plist; sourceTree = "<group>"; };
 		B68CA0AC1D12513E0030D1AA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B68CA0AD1D12513E0030D1AA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B68CA0AE1D12513E0030D1AA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -156,10 +165,13 @@
 		B68CA0261D124AEC0030D1AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B68CA0A81D1250570030D1AA /* TestData.plist */,
+				B662E5FA1D1A4E0A00986954 /* TestDataForJsonArray.txt */,
+				B662E5FB1D1A4E0A00986954 /* TestDataForJsonModel.txt */,
+				B68CA0A81D1250570030D1AA /* TestDataJson.plist */,
 				B68CA0321D124AEC0030D1AA /* Assets.xcassets */,
 				B68CA0371D124AEC0030D1AA /* Info.plist */,
 				B68CA0271D124AEC0030D1AA /* main.m */,
+				B662E5FE1D1A6E0A00986954 /* TestDataArray.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -276,6 +288,8 @@
 				B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */,
 				B68CA1161D129A1C0030D1AA /* NSObject+AndyKeyValue.h */,
 				B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */,
+				B662E6001D1A813400986954 /* AndyFoundation.h */,
+				B662E6011D1A813400986954 /* AndyFoundation.m */,
 			);
 			path = AndyExtension;
 			sourceTree = SOURCE_ROOT;
@@ -386,9 +400,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B662E5FC1D1A4E0A00986954 /* TestDataForJsonArray.txt in Resources */,
 				B68CA0331D124AEC0030D1AA /* Assets.xcassets in Resources */,
+				B662E5FF1D1A6E0A00986954 /* TestDataArray.plist in Resources */,
+				B662E5FD1D1A4E0A00986954 /* TestDataForJsonModel.txt in Resources */,
 				B68CA0B11D12513E0030D1AA /* MainViewController.xib in Resources */,
-				B68CA0A91D1250570030D1AA /* TestData.plist in Resources */,
+				B68CA0A91D1250570030D1AA /* TestDataJson.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +480,7 @@
 			files = (
 				B68CA1191D129A1C0030D1AA /* NSObject+AndyKeyValue.m in Sources */,
 				B68CA0BA1D1251AF0030D1AA /* PicUrls.m in Sources */,
+				B662E6021D1A813400986954 /* AndyFoundation.m in Sources */,
 				B68CA0BC1D1251AF0030D1AA /* TestData.m in Sources */,
 				B68CA0BD1D1251AF0030D1AA /* User.m in Sources */,
 				B68CA0281D124AEC0030D1AA /* main.m in Sources */,
