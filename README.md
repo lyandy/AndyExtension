@@ -1,6 +1,8 @@
 # AndyExtension
 A fast, convenient and nonintrusive conversion for JSON to model. Your model class don't need to extend another base class. You don't need to modify any model file.
 
+__use in pod:__ _pod 'AndyExtension'_
+
 _AnyExtionsion aimed to Combine JSON to Model easily._
 
 ---
