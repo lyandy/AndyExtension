@@ -24,7 +24,6 @@
 		B68CA0BB1D1251AF0030D1AA /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B51D1251AF0030D1AA /* Status.m */; };
 		B68CA0BC1D1251AF0030D1AA /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B71D1251AF0030D1AA /* TestData.m */; };
 		B68CA0BD1D1251AF0030D1AA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA0B91D1251AF0030D1AA /* User.m */; };
-		B68CA1181D129A1C0030D1AA /* NSObject+AndyDurex.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */; };
 		B68CA1191D129A1C0030D1AA /* NSObject+AndyKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */; };
 		B6BA3A771E5EE9C9006E7983 /* AndyExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A701E5EE9C9006E7983 /* AndyExtensionConst.m */; };
 		B6BA3A781E5EE9C9006E7983 /* AndyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BA3A721E5EE9C9006E7983 /* AndyProperty.m */; };
@@ -85,8 +84,6 @@
 		B68CA0B81D1251AF0030D1AA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B68CA0B91D1251AF0030D1AA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B68CA1131D129A1C0030D1AA /* AndyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyExtension.h; sourceTree = "<group>"; };
-		B68CA1141D129A1C0030D1AA /* NSObject+AndyDurex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyDurex.h"; sourceTree = "<group>"; };
-		B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyDurex.m"; sourceTree = "<group>"; };
 		B68CA1161D129A1C0030D1AA /* NSObject+AndyKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AndyKeyValue.h"; sourceTree = "<group>"; };
 		B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AndyKeyValue.m"; sourceTree = "<group>"; };
 		B6BA3A6F1E5EE9C9006E7983 /* AndyExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndyExtensionConst.h; sourceTree = "<group>"; };
@@ -304,8 +301,6 @@
 				B6BA3A741E5EE9C9006E7983 /* NSObject+AndyClass.m */,
 				B6BA3A751E5EE9C9006E7983 /* NSObject+AndyProperty.h */,
 				B6BA3A761E5EE9C9006E7983 /* NSObject+AndyProperty.m */,
-				B68CA1141D129A1C0030D1AA /* NSObject+AndyDurex.h */,
-				B68CA1151D129A1C0030D1AA /* NSObject+AndyDurex.m */,
 				B68CA1161D129A1C0030D1AA /* NSObject+AndyKeyValue.h */,
 				B68CA1171D129A1C0030D1AA /* NSObject+AndyKeyValue.m */,
 				B662E6001D1A813400986954 /* AndyFoundation.h */,
@@ -511,7 +506,6 @@
 				B68CA0281D124AEC0030D1AA /* main.m in Sources */,
 				B68CA09C1D124D5E0030D1AA /* AppDelegate.m in Sources */,
 				B68CA0B01D12513E0030D1AA /* MainViewController.m in Sources */,
-				B68CA1181D129A1C0030D1AA /* NSObject+AndyDurex.m in Sources */,
 				B68CA0BB1D1251AF0030D1AA /* Status.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,6 @@
 
 #import "NSObject+AndyKeyValue.h"
 #import "NSObject+AndyProperty.h"
-#import "NSObject+AndyProperty.h"
 #import "AndyProperty.h"
 #import "AndyFoundation.h"
 #import "AndyExtensionConst.h"
@@ -62,20 +61,23 @@
         //如果value为nil的话，就去andy_replacedKeyFromPropertyName方法里找有没有实现对应的
         if (value == nil)
         {
-            //这里实际上应该用 respondsToSelector 判断一下是否实现了，当然这里我采用了runtime的动态添加方法 andy_resolveClassMethod 来解决的
-            NSDictionary *replacedKeyDict = [self andy_replacedKeyFromPropertyName];
-            if (replacedKeyDict != nil)
+            //这里实际上应该用 respondsToSelector 判断一下是否实现了，当然这里我采用了runtime的动态添加方法 andy_resolveClassMethod 来解决的 --- 后半句已抛弃
+            if ([self respondsToSelector:@selector(andy_replacedKeyFromPropertyName)])
             {
-                //找到已经被替换成了其他成员名称
-                NSString *replacedKey = replacedKeyDict[key];
-                if (replacedKey != nil)
+                NSDictionary *replacedKeyDict = [self andy_replacedKeyFromPropertyName];
+                if (replacedKeyDict != nil)
                 {
-                    value = dict[replacedKey];
+                    //找到已经被替换成了其他成员名称
+                    NSString *replacedKey = replacedKeyDict[key];
+                    if (replacedKey != nil)
+                    {
+                        value = dict[replacedKey];
+                    }
+                    //如果发现为字典里没有替换key对应的replacedKey，则抛弃此成员的解析
+                    else{}
                 }
-                //如果发现为字典里没有替换key对应的replacedKey，则抛弃此成员的解析
-                else{}
+                else {}
             }
-            //如果发现没有实现andy_replacedKeyFromPropertyName，则抛弃此成员的解析
             else{}
         }
         
@@ -95,40 +97,46 @@
         else if ([value isKindOfClass:[NSArray class]])
         {
             //如果已经andy_objectClassInArray方法，指定数据里的数据类型
-            //这里实际上应该用 respondsToSelector 判断一下是否实现了，当然这里我采用了runtime的动态添加方法 andy_resolveClassMethod 来解决的
-            NSDictionary *replacedArrayModelDict = [self andy_objectClassInArray];
-            if (replacedArrayModelDict != nil)
+            //这里实际上应该用 respondsToSelector 判断一下是否实现了，当然这里我采用了runtime的动态添加方法 andy_resolveClassMethod 来解决的 --- 后半句已抛弃
+            if ([self respondsToSelector:@selector(andy_objectClassInArray)])
             {
-                Class replacedModelClass = nil;
-                
-                id replacedValue = replacedArrayModelDict[key];
-                
-                if ([replacedValue isKindOfClass:[NSString class]])
+                NSDictionary *replacedArrayModelDict = [self andy_objectClassInArray];
+                if (replacedArrayModelDict != nil)
                 {
-                    replacedModelClass = NSClassFromString(replacedValue);
-                }
-                else
-                {
-                    replacedModelClass = replacedValue;
-                }
-                
-                //如果找到 数据 里的数据模型类型
-                if (replacedModelClass != nil)
-                {
-                    NSArray * tempValue = [replacedModelClass andy_objectArrayWithKeyValuesArray:value];
-                    if (tempValue != nil)
+                    Class replacedModelClass = nil;
+                    
+                    id replacedValue = replacedArrayModelDict[key];
+                    
+                    if ([replacedValue isKindOfClass:[NSString class]])
                     {
-                        value = tempValue;
+                        replacedModelClass = NSClassFromString(replacedValue);
+                    }
+                    else
+                    {
+                        replacedModelClass = replacedValue;
+                    }
+                    
+                    //如果找到 数据 里的数据模型类型
+                    if (replacedModelClass != nil)
+                    {
+                        NSArray * tempValue = [replacedModelClass andy_objectArrayWithKeyValuesArray:value];
+                        if (tempValue != nil)
+                        {
+                            value = tempValue;
+                        }
                     }
                 }
             }
         }
         
-        if (value) {
-            // KVC赋值:不能传空. 万一出现空值则有杜蕾斯拦截错误，不会崩溃
+        AndyExtensionAssert(value != nil, @"andy_objectWithKeyValues: value can not be nil");
+        AndyExtensionAssert(key != nil, @"andy_objectWithKeyValues: key can not be nil");
+        
+        if (value != nil && key != nil) {
+            // KVC赋值:不能传空. 万一出现空值则有杜蕾斯拦截错误，不会崩溃 --- 不建议第三方库自己拦截
             [objc setValue:value forKey:key];
         }
-
+        
     }];
     
     return objc;
@@ -159,7 +167,7 @@
     NSArray *arr = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
     
     return [self andy_objectArrayWithKeyValuesArray:arr];
-
+    
 }
 
 + (NSArray *)andy_objectArrayWithKeyValuesArray:(NSArray *)keyValuesArray
@@ -259,9 +267,9 @@
         }
         
         dictM[key] = value;
-
+        
     }];
-
+    
     return [dictM copy];
 }
 
