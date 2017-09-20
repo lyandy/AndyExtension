@@ -216,7 +216,14 @@
         return [NSJSONSerialization JSONObjectWithData:(NSData *)self options:kNilOptions error:nil];
     }
     
-    return [self andy_keyValues];
+    if ([self isKindOfClass:[NSArray class]])
+    {
+        return [NSObject andy_keyValuesWithObjectArray:(NSArray *)self];
+    }
+    else
+    {
+        return [self andy_keyValues];
+    }
 }
 
 - (NSString *)andy_JSONString
@@ -278,7 +285,14 @@
     // 1.创建数组
     NSMutableArray *keyValuesArray = [NSMutableArray array];
     for (id object in objectArray) {
-        [keyValuesArray addObject:[object andy_keyValues]];
+        if ([object isKindOfClass:[NSArray class]])
+        {
+            [keyValuesArray addObjectsFromArray:[NSObject andy_keyValuesWithObjectArray:(NSArray *)object]];
+        }
+        else
+        {
+            [keyValuesArray addObject:[object andy_keyValues]];
+        }
     }
     return [keyValuesArray copy];
 }
