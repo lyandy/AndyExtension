@@ -85,7 +85,7 @@
         // 成员属性类型
         NSString *propertyType = property.typeStr;
         // 值是字典,成员属性的类型不是字典,才需要转换成模型
-        if ([value isKindOfClass:[NSDictionary class]] && ![propertyType containsString:@"NS"]) {
+        if ([value isKindOfClass:[NSDictionary class]] && ![propertyType hasPrefix:@"NS"]) {
             // 获取需要转换类的类对象
             Class modelClass =  NSClassFromString(propertyType);
             
